@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whats-up
+  namespace: default
+  labels:
+    app: whats-up
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whats-up
+  template:
+    metadata:
+      labels:
+        app: whats-up
+    spec:
+      containers:
+      - name: whats-up
+        image: "dchsiu/whats-up:latest"
+        ports:
+          - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: whats-up
+  namespace: default
+spec:
+  selector:
+    app: whats-up
+  type: LoadBalancer
+  ports:
+  - name: http
+    targetPort: 3000
+    port: 80
