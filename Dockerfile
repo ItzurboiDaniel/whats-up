@@ -5,7 +5,7 @@ ENV MONGO_DB_USERNAME=admin \
 
 RUN mkdir -p /home/whats-up
 
-COPY ./app /home/whats-up
+COPY ./whats-up /home/whats-up
 
 # set default dir so that next commands executes in /home/app dir
 WORKDIR /home/whats-up
