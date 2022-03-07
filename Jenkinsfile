@@ -30,9 +30,9 @@ pipeline{
                 sshagent(['k8s']) {
                     script {
                         try {
-                            sh "ssh ubuntu@k8scluster kubectl create -f ."
+                            sh "ssh dchsiu@k8scluster kubectl create -f ."
                         } catch (error) {
-                            sh "ssh ubuntu@k8scluster kubectl create -f ."
+                            sh "ssh dchsiu@k8scluster kubectl create -f ."
                         }
                     }
                 }
