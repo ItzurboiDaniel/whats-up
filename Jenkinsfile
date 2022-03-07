@@ -28,7 +28,6 @@ pipeline{
         stage('Deploy to Kubernetes') {
             steps {
                 sshagent(['k8s']) {
-                    sh "scp -o StrictHostKeyChecking=no nodejsapp.yaml ubuntu@k8scluster:/home/ubuntu"
                     script {
                         try {
                             sh "ssh ubuntu@k8scluster kubectl create -f ."
