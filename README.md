@@ -43,7 +43,7 @@ Backend development lists
 Clone repository
 `git clone https://github.com/ItzurboiDaniel/whats-up.git`
 
-Backend setup
+### Backend setup
 Step 1: Go to backend folder
 `cd whatsup-backend`
 
@@ -53,7 +53,7 @@ Step 2: Install dependecies
 Step 3: Start backend
 `npm start`
 
-UI setup
+### UI setup
 Step 1: Go to frontend folder
 `cd whatsup-frontend`
 
